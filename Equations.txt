@@ -1,0 +1,25 @@
+Amortization calculations
+M = monthly mortgage payment
+P = principal loan amount
+r = monthly interest rate (annual interest rate / 12)
+n = number payments over lifetime of loan
+
+M = P ((r(1+r)^n) / (((1+r)^n)-1))
+P = (M(((1+r)^n)-1)) / (r(1+r)^n)
+
+------------------------
+Interest calculations
+interest vs APR - https://www.investopedia.com/calculate-principal-and-interest-5211981
+P = principal balance
+i = interest rate
+I = amt paid toward interest each payment
+
+P * (i/12) = I
+
+------------------------
+New balance calculations
+B = new balance
+I = amt paid toward interest each payment
+P = principal balance
+
+B = P - I
