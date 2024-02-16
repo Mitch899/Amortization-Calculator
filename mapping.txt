@@ -1,2 +1,0 @@
-//ask for input "What is your Principal?"
-//

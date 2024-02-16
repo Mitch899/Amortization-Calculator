@@ -1,0 +1,58 @@
+//ASK user for input: "What is your Principal?"
+//assign response to var "P", input validation
+//ASK user for input: "What is your interest rate (APR)?"
+//assign response to var "int_annual", input validation
+//divide int_annual by 12 and assign quotient to var "r"
+//ASK user for input: "How much time is left on your loan?"
+//provide dropdown for years and months, separately
+//read user input from year dropdown, multiply by 12, assign result as var "ymos"
+//read user input from month dropdown, assign result as var "mmos"
+//add vars "ymos" and "mmos", assign result to var "n"
+//CALCULATE monthly mortgage payment (amt that goes toward principal)
+  //M = P ((r(1+r)^n) / (((1+r)^n)-1))
+//MONTHLY ADDITIONAL PAYMENT x3
+//provide open text for additional $amt, input validation
+//assign response to var "add_monthly_one"
+//provide dropdown for start month/year
+//possibly assign to var - not sure how to subtract time yet
+//provide dropdown for end month/year
+//possibly assign to var - not sure how to subtract time yet
+//calculate end_time - start_time (in months), assign difference to "add_monthly_one_duration"
+//repeat for "add_monthly_two" and "add_monthly_three"
+//validation to enesure start/end dates do not overlap (add note to user as well)
+  //future state: alter this section so they can overlap
+//CALCULATE
+  //M + add_monthly_one = M_add_one
+  //M + add_monthly_two = M_add_two
+  //M + add_monthly_three = M_add_three
+//ANNUAL ADDITIONAL PAYMENT
+//provide open text for additional $amt, input validation
+//assign response to var "add_annual"
+//provide dropdown for start year
+//assign to var "add_yr"
+
+Amortization calculations
+M = monthly mortgage payment
+P = principal loan amount
+r = monthly interest rate (annual interest rate / 12)
+n = number payments over lifetime of loan
+
+M = P ((r(1+r)^n) / (((1+r)^n)-1))
+P = (M(((1+r)^n)-1)) / (r(1+r)^n)
+
+------------------------
+Interest calculations
+interest vs APR - https://www.investopedia.com/calculate-principal-and-interest-5211981
+P = principal balance
+i = interest rate
+I = amt paid toward interest each payment
+
+P * (i/12) = I
+
+------------------------
+New balance calculations
+B = new balance
+I = amt paid toward interest each payment
+P = principal balance
+
+B = P - I
