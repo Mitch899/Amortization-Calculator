@@ -12,14 +12,14 @@
   //M = P ((r(1+r)^n) / (((1+r)^n)-1))
 //MONTHLY ADDITIONAL PAYMENT x3
 //provide open text for additional $amt, input validation
-//assign response to var "add_monthly_one"
+//if not blank: assign response to var "add_monthly_one"
 //provide dropdown for start month/year
-//possibly assign to var - not sure how to subtract time yet
+//if not blank: possibly assign to var A - not sure how to subtract time yet
 //provide dropdown for end month/year
-//possibly assign to var - not sure how to subtract time yet
-//calculate end_time - start_time (in months), assign difference to "add_monthly_one_duration"
+//if not blank: possibly assign to var B - not sure how to subtract time yet
+//if A and B exist, calculate end_time - start_time (in months), assign difference to "add_monthly_one_duration"
 //repeat for "add_monthly_two" and "add_monthly_three"
-//validation to enesure start/end dates do not overlap (add note to user as well)
+//validation to ensure start/end dates do not overlap if more than one monthly additional payment (add note to user as well)
   //future state: alter this section so they can overlap
 //CALCULATE
   //M + add_monthly_one = M_add_one
