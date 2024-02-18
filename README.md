@@ -1,4 +1,4 @@
-# AmortizationCalculator
+# Amortization Calculator
 This amortization (am-er-tuh-zey-shuhn) calculator is designed to build on the features you find with most
 online amotization schedule calculators. When playing with my mortgage and calculating early payments, I 
 often found them lacking. 
@@ -14,8 +14,8 @@ What does this calculator offer that others don't?
   - calculate optimized additional payment amount
   - compare additional payments on current loan with refi to determine which is the better option
 <br><br>
-## Learning Schedule and Lessons Learned
-
+## Learning schedule and lessons learned
+_(This is mostly just so I can come back and reference things later)_
 #### Day 1
 - mapped out entire project - what I want it to look like and what user input fields would be needed
 - got really excited to write the first couple lines and realized I didn't even know how to get user input
