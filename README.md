@@ -67,7 +67,7 @@ breakdown
    - `let var: f32` creates a new immutable variable "var" that will be a 32-byte float (aka a decimal number)
    - `= var` refers to the mutable variable "var" from user input and assigns it to the new IMMUTABLE "var" - pretty sure you can change the name here so it's not "var" and "var", but my brain likes it that way so I have fewer variables sitting around
   - `.trim()` tells rust to trim anything (spaces, non-float characters, \n, etc) from both the front and back of the user input string assigned to "var"
-  - `.parse()` NO CLUE WHAT THIS DOES - circle back and look up later
+  - `.parse()` is a str method that parses the string type into another type [reference](https://doc.rust-lang.org/std/primitive.str.html#method.parse)
   - `.expect("text")` prints "text" to the user if the program errors at this point <br>
 <br>
 
@@ -169,9 +169,10 @@ breakdown
         - it does not panic
         - it counts backwards (descending) from t_num to 1
       - breakdown:
-        - `for month in (1..=t_num)`
-        - `.rev()`
-        - `{`
-        - `println!("{month}");`
-        - `}`
-        - `println!("this works!");`
+        - `for month in (1..=t_num)` this is a for loop with variable "month" being assigned a value in the range from 1 to t_num.
+          - Note that "=t_num" indicates that t_num should be included in the range. If it were written `(1..t_num)` then the range would be from 1 to t_num - 1
+        - `.rev()` indicates that the value assigned to "month" will be in reverse order in the range, meaning that the first value assigned will be t_num, then t_num - 1, then t_num -2, etc. until the final value of 1 is reached
+        - `{` this indicates the beginning of the code block that the for loop will perform
+        - `println!("{month}");` prints the value assigned to month for each iteration of the for loop (from t_num to 1)
+        - `}` ends the for loop
+        - `println!("this works!");` once the for loop exits, the program will print "this works!" to the screen
