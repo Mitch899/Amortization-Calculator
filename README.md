@@ -119,3 +119,59 @@ breakdown
        - the type `f32` is indicated after the equal sign (=) but before the power indication
        - to indicate a power with a float, `powf` is used rather than `pow` ("pow" would be used for signed integers types (`i32`) and unsigned integer types (`u32`))
        - because we are working with a float type, rust requires that all numbers in the calculation be in decimal form. as such, `let x = f32::powf(2.2, 2)` would **not** work because the "2" at the end is an integer and not a float
+
+#### Day 5  
+1. experimenting with `for`, `while`, and `if`
+    - **goal:** write a block of code that will count the duration (number of months) remaining for the life of the loan. this will be used to calculate the new principal balance each month along with the interest paid and payment made toward the principal amount
+    - **initial thought:** use `while` where `t_num` is the user input for total months of loan converted from a string to i32 (see Day 4 items 3 and 4 for syntax)
+      ````
+      ...
+      let m_array = [1 .. t_num];
+      let mut index = t_num - 1;
+      while index >= 0 {
+          println!("month is {}", m_array[index]);
+          index -= 1;
+      }
+      ````
+      - issues:
+        - as is, the block will not compile due to the first line, `let m_array = [1 .. t_num];`
+          - without using a module, an array cannot use the syntactical shorthand for "between 1 and t_num". changing the first two lines to the below will work
+            ````
+            let m_array = [1, 2, 3, 4, 5];
+            let mut index = 5 - 1;
+            ````
+        - the resulting program will panic with error "attempt to subtract with overflow", which is not ideal
+          - this is due to the second to last line, `index -=1`
+    - **using for:**
+      ````
+      ...
+      let m_arr = [1 .. t_num];
+      for index in m_arr {
+          println!("the month is {index}");
+      }
+      ````
+      - issues:
+        - we run into the same issue as using `while` where the first line of code does not work without incorporating a module
+        - this will increase from 1 - t_num rather than counting down from t_num to 1 (needs to be descending for other calculations and to track the total number of months paying on the loan)
+      - improvements compared to `while`:
+        - looks more clean
+        - does not cause program to panic
+    - **using for in:**
+      ````
+      ...
+      for month in (1..=t_num).rev() {
+          println!("{month}");
+      }
+      println!("this works!");
+      ````
+      - improvements:
+        - it works with t_num :)
+        - it does not panic
+        - it counts backwards (descending) from t_num to 1
+      - breakdown:
+        - `for month in (1..=t_num)`
+        - `.rev()`
+        - `{`
+        - `println!("{month}");`
+        - `}`
+        - `println!("this works!");`
