@@ -1,13 +1,11 @@
 # Amortization Calculator
-This amortization (am-er-tuh-zey-shuhn) calculator is designed to build on the features you find with most
-online amotization schedule calculators. When playing with my mortgage and calculating early payments, I 
-often found them lacking. 
+When playing with my mortgage and calculating early payments with online amortization (am-er-tuh-zey-shuhn) schedule calculators, I often find them lacking. Thus, I am creating my own amortization  calculator and designing it to include the features I wish others had. 
 <br><br>
-What does this calculator offer that others don't?
-  1. variable additional monthly payments (allowing you to plan for increases or decreases over time)
+What will this calculator offer that others do not?
+  1. variable additional monthly payments (allowing me to plan for increases or decreases over time)
   2. variable additional yearly payments (think tax refund and months with three paychecks)
   3. multiple one-time payments
-  4. table that shows you what additional monthly payments would do to your interest paid and life of your loan
+  4. a separate table that shows me what additional monthly payments would do to total interest paid and life of the loan
 <br><br>
 
 ## Future plans
