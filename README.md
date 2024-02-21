@@ -156,7 +156,7 @@ breakdown
       - improvements compared to `while`:
         - looks more clean
         - does not cause program to panic
-    - **using for in:**
+    - **using for (better):**
       ````
       ...
       for month in (1..=t_num).rev() {
