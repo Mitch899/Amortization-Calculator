@@ -20,7 +20,7 @@ _(This is mostly just so I can come back and reference things later)_
 1. mapped out entire project - what I want it to look like and what user input fields would be needed
 2. got really excited to write the first couple lines and realized I didn't even know how to get user input
 3. started reading [The Rust Programming Language](https://doc.rust-lang.org/book/title-page.html) - Foreward, Intro, Chapter 1
-  - [Interactive Experimental version of the book](https://rust-book.cs.brown.edu/) - I highly recommend!
+    - [Interactive Experimental version of the book](https://rust-book.cs.brown.edu/) - I highly recommend!
 
 #### Day 2 <br>
 1. started reading Chapter 3 of The Rust Programming Language (being new to programming, I opted to read this chapter first so I would better understand the concepts behind the game code being written in chapter 2)
