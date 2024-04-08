@@ -62,7 +62,7 @@ breakdown:
     let var: f32 = var.trim().parse().expect("Must be a number");
     ````
 breakdown
-   - `let var: f32` creates a new immutable variable "var" that will be a 32-byte float (aka a decimal number)
+   - `let var: f32` creates a new immutable variable "var" that will be a 32-bit float (aka a decimal number)
    - `= var` refers to the mutable variable "var" from user input and assigns it to the new IMMUTABLE "var" - pretty sure you can change the name here so it's not "var" and "var", but my brain likes it that way so I have fewer variables sitting around
   - `.trim()` tells rust to trim anything (spaces, non-float characters, \n, etc) from both the front and back of the user input string assigned to "var"
   - `.parse()` is a str method that parses the string type into another type [reference](https://doc.rust-lang.org/std/primitive.str.html#method.parse)
