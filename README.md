@@ -1,5 +1,5 @@
 # Amortization Calculator
-When playing with my mortgage and calculating early payments with online amortization (am-er-tuh-zey-shuhn) schedule calculators, I often find them lacking. Thus, I am creating my own amortization  calculator and designing it to include the features I wish others had. 
+I often find the online amortization (am-er-tuh-zey-shuhn) schedule calculators lacking. Thus, I am creating my own and designing it to include the features I wish others had. Why is it written in Rust? Just wanted to learn the language!
 <br><br>
 What will this calculator offer that others do not?
   1. variable additional monthly payments (allowing me to plan for increases or decreases over time)
