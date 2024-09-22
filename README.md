@@ -176,15 +176,20 @@ breakdown
         - `println!("this works!");` once the for loop exits, the program will print "this works!" to the screen
        
 #### Day 6
-After taking a multi-month break to learn other things, I finally had time to circle back and work on this project again. During my time off, I completed a Udemy Python course which I think was both a blessing and a curse. It helped me understand what I needed to do and how to do it, but also I kept trying to write everything in Python and had to keep googling so I could "translate" to Rust.
-Accomplishments: 
-1. Successfully built the base "while" loop for the project
-2. Successfully wrote the main equations and tested them (so much testing!)
-Sadly, I didn't use any of the code from 'Day 5', but it will still make a great reference for future projects and there was still value in the testing done
-Next steps:
-1. Calculate the month that principal payment and interest payment flip (when you're officially paying more toward principal than interest each month)
-2. Incorporate calculations for additional regular payments
-3. Incorporate calculations for additional irregular payments
-4. Table output
-5. Add column or two to recalc total interest paid if you put an extra $50 in monthly (and then allow user input for a second amt)
-6. Compare additional payments on current loan with refi to determine which is the better option (include disclaimer that this is not official financial advice lol)
+After taking a multi-month break to learn other things, I finally had time to circle back and work on this project again. During my time off, I completed a Udemy Python course which I think was both a blessing and a curse. It helped me understand what I needed to do and how to do it, but also I kept trying to write everything in Python and had to keep googling so I could "translate" to Rust. <br>
+<br>
+Accomplishments: <br>
+<br>
+1. Successfully built the base "while" loop for the project<br>
+2. Successfully wrote the main equations and tested them (so much testing!) <br>
+<br>
+Sadly, I didn't use any of the code from 'Day 5', but it will still make a great reference for future projects and there was still value in the testing done <br>
+<br>
+Next steps: <br>
+<br>
+1. Calculate the month that principal payment and interest payment flip (when you're officially paying more toward principal than interest each month)<br>
+2. Incorporate calculations for additional regular payments<br>
+3. Incorporate calculations for additional irregular payments<br>
+4. Table output<br>
+5. Add column or two to recalc total interest paid if you put an extra $50 in monthly (and then allow user input for a second amt)<br>
+6. Compare additional payments on current loan with refi to determine which is the better option (include disclaimer that this is not official financial advice lol)<br>
