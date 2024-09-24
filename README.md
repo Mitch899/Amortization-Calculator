@@ -193,3 +193,52 @@ Next steps: <br>
 4. Table output<br>
 5. Add column or two to recalc total interest paid if you put an extra $50 in monthly (and then allow user input for a second amt)<br>
 6. Compare additional payments on current loan with refi to determine which is the better option (include disclaimer that this is not official financial advice lol)<br>
+<br>
+<br>
+#### Day 7
+<br>
+Focus: writing the code for additional monthly payments of a regular amount (this turned out to be A LOT harder than I thought). I was trying to do something like this:<br>
+````
+Ask user: "Do you want to incorporate regular additional monthly payments? y or n "
+Retrieve user input, assign to $choice
+If $choice is "y", ask user "How much extra do you want to pay?" and assign to $additional_monthly_payment
+If $choice is "n", output "You chose not to make regular additional monthly payments."
+if $choice is neither "y" nor "n", output "you must type either y or n", then ask again
+````
+Seems simple and fairly straightforward, right? Whelp, what I didn't account for (or honestly even know) is that Rust identifies characters and strings as two different structures. So my code that looked like this
+````
+use std::io;
+fn main() {
+    println!("pick one (y or n)");
+    let mut choice = String::new();
+    io::stdin()
+        .read_line(&mut choice)
+        .expect("Failed to read entry");
+    println!("You chose {}",choice);
+    if choice == "y" {
+        println!("you picked yes");
+    } else if choice == "n" {
+        println!("you picked no");
+    } else {
+        println!("error");}
+}
+````
+just. kept. failing. After lots of googling, testing in the Rust Playground, and millions of interruptions from children (naps, snacks, play, dance parties, etc.), I had determined that my user input was coming in as a string type but that my "if else" statement was comparing that string to "y" or "n" which Rust identified as a character. After some more playing with no success in getting the above code to run, I finally decided to make that a "feature request" (LOL) and stick with asking the users for number input (1 is "yes" and 0 is "no). With that, my code ran beautifully. Below is a simplified version of what I wrote:
+````
+use std::io;
+fn main() {
+    println!("pick one (0 is no, 1 is yes)");
+    let mut choice = String::new();
+    io::stdin()
+        .read_line(&mut choice)
+        .expect("Failed to read entry");
+        let choice: i32 = choice.trim().parse().expect("Try again");    
+    //println!("You chose {}",choice);
+    if choice == 1 {
+        println!("you picked yes");
+    } else if choice == 0 {
+        println!("you picked no");
+    } else {
+        println!("error");}
+}
+````
