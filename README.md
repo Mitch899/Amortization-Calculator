@@ -222,7 +222,7 @@ fn main() {
         println!("error");}
 }
 ````
-just. kept. failing. After lots of googling, testing in the Rust Playground, and millions of interruptions from children (naps, snacks, play, dance parties, etc.), I had determined that my user input was coming in as a string type but that my "if else" statement was comparing that string to "y" or "n" which Rust identified as a character. After some more playing with no success in getting the above code to run, I finally decided to make that a "feature request" (lol) and stick with asking the users for number input (1 is "yes" and 0 is "no). With that, my code ran beautifully. Below is a simplified version of what I wrote:
+just. kept. failing. After lots of googling, testing in the [Rust Playground](https://play.rust-lang.org/?version=stable&mode=debug&edition=2021), and millions of interruptions from children (naps, snacks, play, dance parties, etc.), I had determined that my user input was coming in as a string type but that my "if else" statement was comparing that string to "y" or "n" which Rust identified as a character. After some more playing with no success in getting the above code to run, I finally decided to make that a "feature request" (lol) and stick with asking the users for number input (1 is "yes" and 0 is "no). With that, my code ran beautifully. Below is a simplified version of what I wrote:
 ````
 use std::io;
 fn main() {
